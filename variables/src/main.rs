@@ -23,5 +23,12 @@ fn main() {
 
     let timer=ONEHOUR*3;
 
-    println!("{timer}")
+    println!("{timer}");
+
+    // shadowing concept - in this concept we declare the same variable name and one variable is ignored by the other variable
+    let apples=20;  // this var is shadowed by the below var
+
+    let apples=30;
+
+    println!("apples {apples}")
 }
