@@ -22,13 +22,18 @@ fn myfunction3() {
     println!("{y}"); // y value will be 4
 }
 
+fn add(x:i32, y:i32) -> i32 {
+    return x+y;
+}
+
 fn main() {
     println!("Hello, world!");
 
     myfunction(); // function calling
     myfunction2(2, true);
     myfunction3();
-    
+    let res=add(2, 3);
+    println!("{res}");
 }
 
 
