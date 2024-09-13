@@ -14,3 +14,5 @@ fn main() {
     println!("Str is {str}");
 
 }
+
+// ownership concept if the owner of a memory goes out of scope then rust frees the memory
