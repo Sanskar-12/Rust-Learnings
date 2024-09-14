@@ -6,12 +6,37 @@
 // 4. Data size cant be increased or decreased in the stack ------  Data size can be increased or decreased in the heap
  
 fn main() {
-    let s="Hello world"; // this string has a known length so this will be stored in the stack and we cannot append more string in it.
+    // let s="Hello world"; // this string has a known length so this will be stored in the stack and we cannot append more string in it.
 
-    let mut str=String::from("Hello world"); // this is stored inside the heap because we can append the strings and change the size of the string.
-    str.push_str(" 2.0");
+    // let mut str=String::from("Hello world"); // this is stored inside the heap because we can append the strings and change the size of the string.
+    // str.push_str(" 2.0");
 
-    println!("Str is {str}");
+    // println!("Str is {str}");
+
+    // -----------------------------------------------//
+
+    // this two variables will be stored inside the stack because they have known length
+    // let mut x = 5; 
+    // let y = x; // this is pass by value means only value is copied inside y
+
+    // x=6;
+    // println!("{y}"); // this will give us y=5
+
+    // --------------------------------------//
+    
+    // let str=String::from("Hello"); // this is pass by reference and both the variables will point to same memory location inside the heap
+
+    // let y=str;
+
+    // println!("{str}"); // this will give error because when i have assigned the str to y then rust will free str and str does not exist in the memory because if rust doesnt free the str then it will cause double free error
+
+    // -------------------------------------------//
+
+    // let str=String::from("Hello"); // this is pass by reference and both the variables will point to same memory location inside the heap
+
+    // let y=str.clone(); // this will make a clone of the str and only y will be pointing to that so you can assume it as pass by value
+
+    // println!("{str}"); // this will not give error because now y has another string same as str
 
 }
 
