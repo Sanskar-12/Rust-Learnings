@@ -4,6 +4,10 @@
 // 2. Accessing the data from the Stack is faster ----- Accessing the data from the heap can be slower because first we have to find the pointer inside the stack and then find the reference of the pointer in the heap 
 // 3. Data is stored in the stack at the compile time ----- Data is stored in the heap at the run time
 // 4. Data size cant be increased or decreased in the stack ------  Data size can be increased or decreased in the heap
+
+fn takesownership(s:String) {
+    println!("{s}");
+}
  
 fn main() {
     // let s="Hello world"; // this string has a known length so this will be stored in the stack and we cannot append more string in it.
@@ -38,6 +42,15 @@ fn main() {
 
     // println!("{str}"); // this will not give error because now y has another string same as str
 
+    // -----------------------------------//
+    let str=String::from("Hello"); // passing the value of String datatype inside a function also changes the ownership
+
+    takesownership(str);
+
+    // println!("{str}"); // thats why its giving error because the ownership changed when we pass the value inside the function
+
 }
+
+
 
 // ownership concept if the owner of a memory goes out of scope then rust frees the memory
