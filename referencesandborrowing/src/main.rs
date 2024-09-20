@@ -27,7 +27,7 @@
 
 
 // ---------------------------------cannot have nultiple mutable refereces---------------//
-fn main() {
+// fn main() {
     // let mut s=String::from("Hello");
     // let s1=&mut s;
     // let s2=&mut s; // it will give error because you cannot have multiple mutable references in the same scope
@@ -44,4 +44,16 @@ fn main() {
     // r2.push_str("Hello");
 
     // println!("{r2}");
+// }
+
+// ---------------------------dangling reference-------------//
+
+fn main() {
+//     let reference_to_nothing = dangle();
+// }
+
+// fn dangle() -> &String {
+//     let s = String::from("hello");
+
+//     &s // this will give error because we cannot return the reference of the varaible
 }
