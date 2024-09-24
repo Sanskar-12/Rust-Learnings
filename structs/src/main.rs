@@ -28,7 +28,7 @@ struct User {
 //     // println!("Username of the user is {}",user.username); // now we cannot access this because ownership is moved 
 // }
 
-
+// creating the another instance with the use of other instance with update syntax
 fn main() {
     let user: User = build_user(
         String::from("Sanskar"),
@@ -36,8 +36,21 @@ fn main() {
         9792937239,
     );
 
-    println!("Username is {}",user.username);
+    // i can update like this but we have more properties then we can use shorthand like spread operator like in javascript
+    // let user2=User {
+    //     username:user.username,
+    //     email:String::from("sanskar123@gmail.com"),
+    //     phone:user.phone
+    // };
+
+    let user2=User {
+        email:String::from("sanskar123@gmail.com"),
+        ..user // spread operator
+    };
+
+    // println!("Username is {}",user.username); // i cant use it because the ownership is with user2 now
 }
+
 
 fn build_user(username:String, email:String, phone:u64) -> User {
     User {
