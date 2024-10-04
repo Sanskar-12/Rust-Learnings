@@ -1,0 +1,6 @@
+[package]
+name = "auth-service-implementation-of-packages-and-crates"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
