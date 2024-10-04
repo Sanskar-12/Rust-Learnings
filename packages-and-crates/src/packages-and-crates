@@ -1,0 +1,17 @@
+so starting with crates
+
+so crates are in simple term is called a single file
+there are two types of crates 
+1. Binary crates
+2. Library crates
+
+so Binary crates can be compiled and executable and have a main function ---- for eg we created guess the game file
+Library crates cannot be compiled and executable and dont have a main function but it can be used inside Binary crates to provide extra functionality to the Binary crates It contains all the functions which we can use in our binary crate ----- for eg rand Library crate to create random numbers
+
+so the code we write inside rust we write it on Binary crates
+
+so Packages may be called as a folder which contain one or more binary crates and only one Library crate
+
+now how rust can identify binary crates and Library crates 
+so src/main.rs is a Root binary crate
+and src/lib.rs is a Root library crate
